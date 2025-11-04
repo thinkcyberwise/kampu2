@@ -52,6 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                           <p><strong>Preferred Time:</strong> $time</p>
                           <p><strong>Meeting Preference:</strong> $meeting</p>
                           <p><strong>Message:</strong> $message</p>";
+$mail->SMTPDebug = 2;
+$mail->Debugoutput = 'error_log';
 
         $mail->send();
 
